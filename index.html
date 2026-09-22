@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BridanX Tech LLC | Software, Web & Platform Development</title>
+  <meta name="description" content="BridanX Tech LLC builds modern websites, applications, platforms, APIs, automation systems and custom software solutions for businesses and organizations.">
+  <meta name="keywords" content="BridanX Tech LLC, website development, software development, application development, platform development, API development, automation, custom software">
+  <meta name="author" content="Bridan World - BridanX Tech LLC">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.bridanxtech.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BridanX Tech LLC | Digital Products & Software Development">
+  <meta property="og:description" content="We design and develop modern websites, applications, platforms and custom digital solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bridanxtech.com/">
+  <meta name="theme-color" content="#050816">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050816'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-size='48' font-family='Arial' font-weight='700' fill='%2360a5fa'%3EBX%3C/text%3E%3C/svg%3E">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BridanX Tech LLC",
+    "url": "https://www.bridanxtech.com/",
+    "email": "worldbridan3@gmail.com",
+    "telephone": "+256746673971",
+    "founder": {
+      "@type": "Person",
+      "name": "Bridan World"
+    },
+    "description": "Software, website, application and platform development company."
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       BRIDANX TECH LLC - STYLES
+    ========================================================= */
+    :root {
+      --bg: #050816;
+      --bg2: #081126;
+      --card: rgba(13, 24, 48, 0.72);
+      --card2: rgba(18, 31, 60, 0.85);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --blue: #60a5fa;
+      --blue2: #2563eb;
+      --cyan: #22d3ee;
+      --border: rgba(148, 163, 184, 0.14);
+      --success: #22c55e;
+      --shadow: 0 25px 80px rgba(0, 0, 0, .35);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(37, 99, 235, .20), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(34, 211, 238, .12), transparent 25%),
+        linear-gradient(135deg, #030712, #050816 45%, #07142b);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: auto;
+    }
+
+    /* CODE BACKGROUND */
+    .code-background {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      opacity: .07;
+      z-index: -2;
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #60a5fa;
+      transform: rotate(-5deg) scale(1.15);
+    }
+
+    .code-column {
+      position: absolute;
+      white-space: pre;
+      animation: codeMove 30s linear infinite;
+    }
+
+    .code-column:nth-child(1) { left: 2%; top: -20%; }
+    .code-column:nth-child(2) { left: 27%; top: -40%; animation-duration: 38s; }
+    .code-column:nth-child(3) { left: 55%; top: -10%; animation-duration: 34s; }
+    .code-column:nth-child(4) { left: 80%; top: -35%; animation-duration: 42s; }
+
+    @keyframes codeMove {
+      from { transform: translateY(0); }
+      to { transform: translateY(100vh); }
+    }
+
+    /* NAVIGATION */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(3, 7, 18, .72);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--blue2), var(--cyan));
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 0 35px rgba(37,99,235,.4);
+    }
+
+    .brand-text span { display: block; font-size: 15px; }
+    .brand-text small { display: block; font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .nav-button {
+      padding: 11px 18px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue2), var(--blue));
+      color: white !important;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(37,99,235,.25);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      border: 1px solid rgba(96,165,250,.2);
+      border-radius: 999px;
+      background: rgba(37,99,235,.08);
+      color: #bfdbfe;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 12px var(--success);
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 7vw, 86px);
+      line-height: .98;
+      letter-spacing: -4px;
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #fff, #60a5fa, #22d3ee);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 21px;
+      border-radius: 13px;
+      border: 1px solid var(--border);
+      transition: transform .25s, box-shadow .25s, background .25s;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary { background: linear-gradient(135deg, var(--blue2), var(--blue)); color: white; box-shadow: 0 18px 45px rgba(37,99,235,.28); }
+    .btn-secondary { background: rgba(255,255,255,.04); color: #e2e8f0; }
+
+    /* HERO VISUAL */
+    .hero-card {
+      position: relative;
+      min-height: 500px;
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      background: linear-gradient(145deg, rgba(15,23,42,.92), rgba(7,18,39,.72));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 25px;
+    }
+
+    .terminal {
+      position: relative;
+      height: 100%;
+      min-height: 450px;
+      border-radius: 22px;
+      background: rgba(2,6,23,.85);
+      border: 1px solid rgba(148,163,184,.12);
+      overflow: hidden;
+      font-family: monospace;
+    }
+
+    .terminal-top {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 17px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .terminal-dot { width: 9px; height: 9px; border-radius: 50%; background: #475569; }
+    .terminal-body { padding: 25px; color: #94a3b8; font-size: 13px; line-height: 2; }
+    .terminal-blue { color: #60a5fa; }
+    .terminal-cyan { color: #22d3ee; }
+    .terminal-green { color: #4ade80; }
+    .terminal-white { color: white; }
+
+    /* CEO SECTION */
+    .ceo-section { position: relative; }
+    .ceo-card {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 55px;
+      align-items: center;
+      padding: 45px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(15,23,42,.9), rgba(7,18,38,.72));
+      box-shadow: var(--shadow);
+    }
+
+    .ceo-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 26px;
+      background: linear-gradient(145deg, #111d38, #071126);
+      border: 1px solid rgba(96,165,250,.18);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ceo-role { color: var(--blue); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 800; margin-bottom: 8px; }
+    .ceo-content h2 { font-size: clamp(32px, 5vw, 50px); letter-spacing: -2px; margin-bottom: 17px; }
+    .ceo-content p { color: var(--muted); margin-bottom: 17px; font-size: 15px; max-width: 680px; }
+    .signature { margin-top: 25px; color: white; font-family: cursive; font-size: 25px; }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 900px) {
+      .hero-grid, .ceo-card { grid-template-columns: 1fr; }
+      .ceo-photo { max-width: 330px; margin: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Code Animation -->
+  <div class="code-background">
+    <div class="code-column">const app = express();<br>app.listen(3000);</div>
+    <div class="code-column">import React from 'react';<br>export default App;</div>
+    <div class="code-column">SELECT * FROM users;<br>WHERE status = 'active';</div>
+    <div class="code-column">git commit -m "Deploy"<br>git push origin main</div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo">BX</div>
+        <div class="brand-text">
+          <span>BridanX Tech</span>
+          <small>LLC</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#ceo">Leadership</a>
+        <a href="#contact" class="nav-button">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> Next-Gen Software Engineering</div>
+        <h1>Building <span>Digital Products</span> That Drive Growth</h1>
+        <p class="hero-description">We design and develop modern websites, applications, platform architectures, and custom enterprise automation software.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Start Your Project</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="terminal">
+          <div class="terminal-top">
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+          </div>
+          <div class="terminal-body">
+            <p><span class="terminal-blue">bridanx@tech</span>:<span class="terminal-cyan">~</span>$ deploy-solution --prod</p>
+            <p class="terminal-white">[INFO] Building scalable web application...</p>
+            <p class="terminal-green">[SUCCESS] Security protocols validated.</p>
+            <p class="terminal-green">[SUCCESS] API Endpoints connected.</p>
+            <p class="terminal-blue">System ready. Launching digital product...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO Leadership Section -->
+  <section id="ceo" class="ceo-section">
+    <div class="container">
+      <div class="ceo-card">
+        <div class="ceo-photo">
+          <img src="IMG-20260913-WA0004.jpg" alt="CEO of BridanX Tech LLC" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="ceo-content">
+          <div class="ceo-role">Leadership</div>
+          <h2>Driven by Innovation & Engineering Excellence</h2>
+          <p>At BridanX Tech LLC, we aim to bridge the gap between ideas and high-performing digital systems. Every application and website we deliver is engineered with precision, high performance, and security at its core.</p>
+          <div class="signature">Bridan World</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
